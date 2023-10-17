@@ -1,8 +1,8 @@
 '''
-Author: KiwiMax MaxAndFelixZheng@outlook.com
+Author: MaxAndFelix MaxAndFelixZheng@outlook.com
 Date: 2023-10-16 19:40:25
 LastEditors: MaxAndFelix MaxAndFelixZheng@outlook.com
-LastEditTime: 2023-10-17 16:01:42
+LastEditTime: 2023-10-17 16:03:17
 FilePath: \The-implementation-computer-graphics\Line_drawing_algorithm.py
 Description: Line drawing algorithm with 3 algorithms, includiing DDA,mid-point and Bresenham
 '''
