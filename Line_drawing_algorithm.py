@@ -95,39 +95,39 @@ def DDALine(screen, x1, y1, x2, y2):
     if (x1 > x2): 
         x1, x2 = swap(x1, x2)
         y1, y2 = swap(y1, y2)
-    if y1 < y2 :
-        k = (float)(dy / dx)
-        y = (float)(y1)
-        while x1 <= x2:
-            if flag == 0:
-                pygame.draw.circle(screen, (255, 255, 255), (x1, (int)(y)), 1, 1)
-                time.sleep(0.03)
-                pygame.display.update() 
-                y = y + k
-                x1 = x1 +1
-            else:
-                pygame.draw.circle(screen, (255, 255, 255), ((int)(y), x1), 1, 1)
-                time.sleep(0.03)
-                pygame.display.update() 
-                y = y + 1/k
-                x1 = x1 +1 
+    # if y1 < y2 :
+    k = (float)(dy / dx)
+    y = (float)(y1)
+    while x1 <= x2:
+        if flag == 0:
+            pygame.draw.circle(screen, (255, 255, 255), (x1, (int)(y)), 1, 1)
+            time.sleep(0.03)
+            pygame.display.update() 
+            y = y + k
+            x1 = x1 +1
+        else:
+            pygame.draw.circle(screen, (255, 255, 255), ((int)(y), x1), 1, 1)
+            time.sleep(0.03)
+            pygame.display.update() 
+            y = y + 1/k
+            x1 = x1 +1 
             
-    else:
-        k = (float)(dy / dx)
-        y = (float)(y1)
-        while x1 <= x2:
-            if flag == 0:
-                pygame.draw.circle(screen, (255, 255, 255), (x1, (int)(y)), 1, 1)
-                time.sleep(0.03)
-                pygame.display.update()
-                y = y + k
-                x1 = x1 + 1
-            else:
-                pygame.draw.circle(screen, (255, 255, 255), ((int)(y), x1), 1, 1)
-                time.sleep(0.03)
-                pygame.display.update()
-                y = y + 1/k
-                x1 = x1 + 1 
+    # else:
+    #     k = (float)(dy / dx)
+    #     y = (float)(y1)
+    #     while x1 <= x2:
+    #         if flag == 0:
+    #             pygame.draw.circle(screen, (255, 255, 255), (x1, (int)(y)), 1, 1)
+    #             time.sleep(0.03)
+    #             pygame.display.update()
+    #             y = y + k
+    #             x1 = x1 + 1
+    #         else:
+    #             pygame.draw.circle(screen, (255, 255, 255), ((int)(y), x1), 1, 1)
+    #             time.sleep(0.03)
+    #             pygame.display.update()
+    #             y = y + 1/k
+    #             x1 = x1 + 1 
             
 # 中点划线法画白线
 def MidPointLine(screen, x1, y1, x2, y2):

@@ -119,7 +119,7 @@ def mid_point_ellipse_horizontal(screen,x1,y1,x2,y2,x3,y3):
             d = d + 2*b**2*x + 3*b**2
             x = x+1
         ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),x,y)
-    d = b**2*x + b**2/4 - 2*a**2*y + a**2
+    4
     while y>=0:
         if d > 0:
             d = d - 2*a**2*y + a**2*3
@@ -138,28 +138,29 @@ def mid_point_ellipse_vetical(screen,x1,y1,x2,y2,x3,y3):
     a = ((l1+l2)/2)
     b = (sqrt(a**2-c**2))
     x = 0
-    y = (int)(b)
-    d = b**2*x + b**2/4 - 2*a**2*y + a**2
-    ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),y,x)
-    while b**2*x < a**2*y:
+    y = (int)(a)
+    d = 2*a**2*x+a**2-b**2*y+b**2/4
+    ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),x,y)
+    while a**2*x < b**2*y:
         if d > 0:
-            d = d - 2*a**2*y + a**2*3
-            y = y - 1
-        else:
-            d = d + 2*b**2*x + b**2*2 - 2*a**2*y + a**2*3
-            x = x + 1
-            y = y - 1
-        ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),y,x)
-    d = 2*b**2*x+b**2-a**2*y+a**2/4
-    while y>=0:
-        if d > 0:
-            d = d + 2*b**2*x + 3*b**2 - 2*a**2*y + a**2*2
+            d = d + 2*a**2*x + 3*a**2 - 2*b**2*y + b**2*2
             x = x+1
             y = y-1
         else:
-            d = d + 2*b**2*x + 3*b**2
+            d = d + 2*a**2*x + 3*a**2
             x = x+1
-        ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),y,x)
+        ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),x,y)
+    d = a**2*x + a**2/4 - 2*b**2*y + b**2
+    while y>=0:
+        
+        if d > 0:
+            d = d - 2*b**2*y + b**2*3
+            y = y - 1
+        else:
+            d = d + 2*a**2*x + a**2*2 - 2*b**2*y + b**2*3
+            x = x + 1
+            y = y - 1
+        ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),x,y)
                    
 
 def BresenhamEllipse(screen,x1,y1,x2,y2,x3,y3):
