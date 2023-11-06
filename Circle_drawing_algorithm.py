@@ -119,7 +119,7 @@ def mid_point_ellipse_horizontal(screen,x1,y1,x2,y2,x3,y3):
             d = d + 2*b**2*x + 3*b**2
             x = x+1
         ellipse_point(screen,(int)((x1+x2)/2),(int)((y1+y2)/2),x,y)
-    4
+    d = b**2*x + b**2/4 - 2*a**2*y + a**2
     while y>=0:
         if d > 0:
             d = d - 2*a**2*y + a**2*3
